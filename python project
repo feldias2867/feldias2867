@@ -1,0 +1,45 @@
+javascript
+
+
+              <div className="mt-4 p-4 bg-gray-100 rounded-lg">
+                <h4 className="font-bold text-sm mb-2">Código Python equivalente:</h4>
+                <pre className="text-xs font-mono text-gray-700">
+{modo === 'original' ? 
+`alunos = ${resultado.alunos}
+monitores = ${resultado.monitores}
+total = alunos + monitores
+
+if total {'<='} 50:
+    print("sim, pode ir")
+else:
+    print("não pode ir")` 
+:
+`alunos = ${resultado.alunos}
+monitores = ${resultado.monitores}
+professores = 8
+total = alunos + monitores + professores
+
+if total {'<='} 30:
+    print("sim, pode ir")
+else:
+    print("não pode ir")`}
+                </pre>
+              </div>
+            </div>
+          )}
+
+          {/* Explicação */}
+          <div className="mt-8 p-4 bg-blue-50 rounded-lg">
+            <h3 className="font-bold text-blue-800 mb-2">💡 Como funciona:</h3>
+            <ul className="text-sm text-blue-700 space-y-1">
+              <li>• <strong>Modo Original:</strong> Soma alunos + monitores (capacidade: 50)</li>
+              <li>• <strong>Modo Desafio:</strong> Soma alunos + monitores + 8 professores (capacidade: 30)</li>
+              <li>• Se o total &lt;= capacidade "pode ir"</li>
+              <li>• Se o total &gt; capacidade "não pode ir"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
